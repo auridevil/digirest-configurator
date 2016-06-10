@@ -7,6 +7,13 @@ const gulp = require('gulp');
  */
 gulp.task('crud-scaffold', require('./crud_scaffold')(gulp));
 
+
+/**
+ * digirest init
+ */
+gulp.task('digi-init', require('./digi_init')(gulp));
+
+
 /**
  * defualt task
  */

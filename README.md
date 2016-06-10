@@ -1,4 +1,4 @@
-# digirest-scripts
+digirest-scripts
 ====================
 various automation scripts for digirest
 

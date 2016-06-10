@@ -14,11 +14,9 @@ module.exports = function(gulp) {
 
     // get params
     var name = yargs.name;
-    var parentPath = yargs.parent || '';
-    var verboselevel = yargs.verbose || 'none';
 
     // check params
-    if (!name || !parentPath) {
+    if (!name) {
       return help();
     }
 
@@ -32,7 +30,7 @@ module.exports = function(gulp) {
       plursnakeName: plur(snake_case(name), 2),
       plurupcamelcaseName: plur(name)
     };
-    var templatesPath = path.join(__dirname, 'crud-template/**/*');
+    var templatesPath = path.join(__dirname, 'init-templates/**/*');
     var destPath = path.join(__dirname, parentPath, name);
 
     printlog('NAMES: ' + JSON.stringify(names), verboselevel);

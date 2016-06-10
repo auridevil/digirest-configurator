@@ -1,0 +1,57 @@
+{
+  "name": "sdt-services",
+  "version": "1.0.0",
+  "description": "INSERT PROJECT DESCRIPTION HERE",
+  "main": "/bin/www",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://digitalxmobile@bitbucket.org/digitalxsrl/sdt-sdt-services.git"
+  },
+  "engines": {
+    "node": "5.7.0"
+  },
+  "author": "aureliano",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.0.0-rc.4",
+    "asynquence": "^0.9.0",
+    "asynquence-contrib": "^0.26.0",
+    "basic-auth": "^1.0.4",
+    "body-parser": "^1.15.1",
+    "cloneextend": "0.0.3",
+    "compression": "^1.6.1",
+    "cookie-parser": "^1.4.1",
+    "cors": "^2.7.1",
+    "datingjson": "0.0.3",
+    "debug": "^2.2.0",
+    "dgx-pushwoosh-client": "github:auridevil/pushwoosh-node-client",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "express-jwt": "^3.4.0",
+    "jsonwebtoken": "^6.2.0",
+    "memory-cache": "^0.1.5",
+    "moment": "^2.13.0",
+    "mongodb": "^2.1.18",
+    "morgan": "^1.7.0",
+    "nodalytics": "^1.1.0",
+    "path": "^0.12.7",
+    "properties-reader": "0.0.15",
+    "q": "^1.4.1",
+    "retry": "^0.9.0",
+    "sendgrid": "^2.0.0",
+    "serve-favicon": "^2.3.0",
+    "socket.io": "^1.4.6",
+    "string": "^3.3.1",
+    "toobusy-js": "^0.5.0",
+    "underscore": "^1.8.3",
+    "winston": "^2.2.0",
+    "xpay-js": "0.0.1"
+  },
+  "devDependencies": {
+    "adm-zip": "^0.4.7",
+    "sleep": "^3.0.1"
+  }
+}
