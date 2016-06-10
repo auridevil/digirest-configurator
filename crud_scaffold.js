@@ -15,7 +15,7 @@ module.exports = function(gulp) {
     // get params
     var name = yargs.name;
     var parentPath = yargs.parent || '';
-    var verboselevel = yargs.v || 'none';
+    var verboselevel = yargs.verbose || 'none';
 
     // check params
     if (!name || !parentPath) {
@@ -32,7 +32,7 @@ module.exports = function(gulp) {
       plursnakeName: plur(snake_case(name), 2),
       plurupcamelcaseName: plur(name)
     };
-    var templatesPath = path.join(__dirname, 'templates/**/*');
+    var templatesPath = path.join(__dirname, 'crud-templates/**/*');
     var destPath = path.join(__dirname, parentPath, name);
 
     printlog('NAMES: ' + JSON.stringify(names), verboselevel);
@@ -71,7 +71,7 @@ module.exports = function(gulp) {
  */
 function help() {
   console.log('Usage: gulp crud-scaffold --name EntityName --parent parentpath');
-  console.log('add --v debug for verbose version');
+  console.log('add --verbose verbose version');
 }
 
 /**

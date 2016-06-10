@@ -5,7 +5,7 @@ const gulp = require('gulp');
 /**
  * scaffold task
  */
-gulp.task('crud-scaffold', require('./crud_scaffold'));
+gulp.task('crud-scaffold', require('./crud_scaffold')(gulp));
 
 /**
  * defualt task
