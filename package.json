@@ -1,0 +1,32 @@
+{
+  "name": "digirest-scripts",
+  "version": "0.0.1",
+  "description": "various scripts for digirest automations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auridevil/digirest-scripts.git"
+  },
+  "keywords": [
+    "digirest",
+    "script",
+    "automation",
+    "scaffolding"
+  ],
+  "author": "Aureliano Bergese",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/auridevil/digirest-scripts/issues"
+  },
+  "homepage": "https://github.com/auridevil/digirest-scripts#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-template": "^4.0.0",
+    "plur": "^2.1.2",
+    "yargs": "^4.7.1"
+  }
+}
