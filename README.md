@@ -1,7 +1,9 @@
 # digirest-scripts
 various automation scripts for digirest
-Project scaffolding for entities
+
+create crud operations and route for entity:
+
+	gulp crud-scaffold --name EntityName --parent OUT
 
 
 
-Work IN Progress
