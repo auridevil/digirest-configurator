@@ -1,4 +1,5 @@
-# digirest-configurator
+# digirest-scripts
+various automation scripts for digirest
 Project scaffolding for entities
 
 
