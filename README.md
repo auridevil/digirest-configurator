@@ -13,8 +13,9 @@ init a digirest project
 	gulp digi-init --name projectname --parent OUT
 
 
-check for vulnerabilities in modules (run sudo npm install retire -g before)
+check for vulnerabilities in modules
 ================
+	sudo npm install retire -g
 	gulp retire:watch
 
 
