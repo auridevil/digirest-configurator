@@ -1,6 +1,6 @@
 digirest-scripts
 ====================
-various automation scripts for digirest
+various automation scripts for digirest (work in progress)
 
 
 create crud operations and route for entity:
