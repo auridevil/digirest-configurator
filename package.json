@@ -23,10 +23,14 @@
   },
   "homepage": "https://github.com/auridevil/digirest-scripts#readme",
   "devDependencies": {
+    "async": "^2.0.0-rc.6",
     "gulp": "^3.9.1",
+    "gulp-git": "^1.7.2",
     "gulp-rename": "^1.2.2",
     "gulp-template": "^4.0.0",
+    "gulp-util": "^3.0.7",
     "plur": "^2.1.2",
+    "retire": "^1.1.5",
     "yargs": "^4.7.1"
   }
 }

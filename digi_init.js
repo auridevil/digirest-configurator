@@ -1,7 +1,9 @@
 const path = require('path');
 const yargs = require('yargs').argv;
 const rename = require('gulp-rename');
+const git = require('gulp-git');
 const template = require('gulp-template');
+const async = require('async');
 const plur = require('plur');
 
 const SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g;
@@ -14,9 +16,11 @@ module.exports = function(gulp) {
 
     // get params
     var name = yargs.name;
+    var parentPath = yargs.parent || '';
+    var verboselevel = yargs.verbose || 'none';
 
     // check params
-    if (!name) {
+    if (!name || !parentPath) {
       return help();
     }
 
@@ -30,17 +34,12 @@ module.exports = function(gulp) {
       plursnakeName: plur(snake_case(name), 2),
       plurupcamelcaseName: plur(name)
     };
-    var templatesPath = path.join(__dirname, 'init-templates/**/*');
+    var templatesPath = path.join(__dirname, 'init-template/**/*');
     var destPath = path.join(__dirname, parentPath, name);
+    var gitInitPath = parentPath + '/' + names.snakecaseName;
 
-    printlog('NAMES: ' + JSON.stringify(names), verboselevel);
-    printlog('TEMPLATES PATH: ' + JSON.stringify(templatesPath), verboselevel);
-    printlog('DEST PATH: ' + JSON.stringify(destPath), verboselevel);
-
-    // console.log(
     var task = gulp.src(templatesPath)
       .pipe(template({
-        // name: name.toLowerCase(),
         upcamelcaseName: names.upcamelcaseName,
         snakecaseName: names.snakecaseName,
         camelCaseName: names.camelCaseName,
@@ -54,12 +53,13 @@ module.exports = function(gulp) {
         dirPath.dirname = dirPath.dirname.split('temp').join(names.plursnakeName);
         printlog('RENAMED: ' + JSON.stringify(dirPath), verboselevel);
       }))
-      .pipe(gulp.dest(destPath));
-      // );
+      .pipe(
+        gulp.dest(destPath));
+
+    console.log('At the end git init the project root, git init the src root and fetch remote for the digirest')
 
     return task;
 
-  // return ;
   };
 }
 
@@ -68,8 +68,8 @@ module.exports = function(gulp) {
  * print a little help
  */
 function help() {
-  console.log('Usage: gulp crud-scaffold --name EntityName --parent parentpath');
-  console.log('add --verbose verbose version');
+  console.log('Usage: gulp digi-init --name projectname --parent outputPath');
+  console.log('add --verbose debug for verbose version');
 }
 
 /**
